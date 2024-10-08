@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vse na enem mestu za študentsko delo | Mjob študentski servis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="slike/mjob-logo.png" alt="Mjob logo"> 
+            </div>
+            <nav>
+                <ul class="meni">
+                    <li><a href="#">Jobi</a></li>
+                    <li><a href="#">Napotnice</a></li>
+                    <li><a href="#">Zaslužki</a></li>
+                    <li><a href="#">Info</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Novosti</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <a href="#" class="icon"><img src="slike/User-icon.png" alt="User Icon"></a> 
+                <a href="#" class="icon"><img src="slike/heart-icon.png" alt="Heart Icon"></a> 
+                <a href="tel:+042020450" class="telSt">04 20 20 450</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="obrazec">
+            <h2>Registracija</h2>
+            <p>Vnesi šumnike in druge posebne znake, če so prisotni v tvojih uradnih podatkih. Polja označena z * so obvezna.</p>
+            <form>
+                <div class="form-skupina">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" placeholder="Email *" required>
+                </div>
+
+                <div class="form-skupina">
+                    <label for="geslo">Geslo *</label>
+                    <input type="password" id="geslo" placeholder="Geslo *" required>
+                </div>
+
+                <div class="form-skupina">
+                    <label for="potrdi-geslo">Potrdi geslo *</label>
+                    <input type="password" id="potrdi-geslo" placeholder="Potrdi geslo *" required>
+                </div>
+
+                <div class="form-skupina">
+                    <label for="ime">Ime *</label>
+                    <input type="text" id="ime" placeholder="Ime *" required>
+                </div>
+
+                <div class="form-skupina">
+                    <label for="priimek">Priimek *</label>
+                    <input type="text" id="priimek" placeholder="Priimek *" required>
+                </div>
+
+                <div class="form-skupina">
+                    <label for="telefon">Telefon *</label>
+                    <div class="phone-input">
+                        <select>
+                            <option value="+386">+386</option>
+                            <option value="+381">+381</option>
+                        </select>
+                        <input type="text" id="telefon" placeholder="npr. 31 123 123" required>
+                    </div>
+                </div>
+
+                <div class="form-skupina">
+                    <label for="naslov">Pošta in kraj stalnega prebivališča *</label>
+                    <input type="text" id="naslov" placeholder="Pošta in kraj stalnega prebivališča *" required>
+                </div>
+
+                <div class="form-skupina">
+                    <label for="datum-rojstva">Datum rojstva *</label>
+                    <div class="date-inputs">
+                        <select id="dan">
+                            <option value="" disabled selected>Dan</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                            
+                        </select>
+                        <select id="mesec">
+                            <option value="" disabled selected>Mesec</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select id="leto">
+                            <option value="" disabled selected>Leto</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2009">2009</option>
+                            <option value="2008">2008</option>
+                            <option value="2007">2007</option>
+                            <option value="2006">2006</option>
+                            <option value="2005">2005</option>
+                            <option value="2004">2004</option>
+                            <option value="2003">2003</option>
+                            <option value="2002">2002</option>
+                            <option value="2001">2001</option>
+                            <option value="2000">2000</option>
+                            <option value="1999">1999</option>
+                            <option value="1998">1998</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-skupina">
+                    <label for="emso">EMŠO</label>
+                    <input type="text" id="emso" placeholder="EMŠO">
+                </div>
+
+                <div class="form-skupina">
+                    <label for="kraj-bivanja">Kraj bivanja</label>
+                    <input type="text" id="kraj-bivanja" placeholder="Kraj bivanja">
+                </div>
+
+                <div class="form-skupina">
+                    <label for="davcna-stevilka">Davčna številka</label>
+                    <input type="text" id="davcna-stevilka" placeholder="Davčna številka">
+                </div>
+
+                <div class="form-skupina">
+                    <label for="trr">TRR</label>
+                    <input type="text" id="trr" placeholder="TRR">
+                </div>
+
+                <div class="form-skupina">
+                    <label for="drzavljanstvo">Državljanstvo</label>
+                    <input type="text" id="drzavljanstvo" placeholder="Državljanstvo">
+                </div>
+
+                <div class="form-skupina">
+                    <label for="promocijska-koda">Promocijska koda</label>
+                    <input type="text" id="promocijska-koda" placeholder="Promocijska koda">
+                </div>
+
+                <div class="form-skupina checkbox">
+                    <input type="checkbox" id="pogoji-uporabe">
+                    <label for="pogoji-uporabe">Pogoji in nameni uporabe</label>
+                    <a href="#">Preberi več o pogojih in namenih uporabe ></a>
+                </div>
+
+                <div class="form-skupina checkbox">
+                    <input type="checkbox" id="splosni-pogoji">
+                    <label for="splosni-pogoji">Splošni pogoji poslovanja</label>
+                    <a href="#">Preberi več o splošnih pogojih poslovanja ></a>
+                </div>
+
+                <button type="submit" class="submit-btn">Registracija</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Gumb za vrnitev na vrh strani -->
+    <a href="#" id="scrollToTopBtn" class="scroll-to-top">&#8679; NA VRH</a>
+    
+    <script>
+        // Script za gumb vrnitev na vrh
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+        scrollToTopBtn.addEventListener("click", function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    </script>
+</body>
+</html>
