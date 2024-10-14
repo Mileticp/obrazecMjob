@@ -1,2 +1,2 @@
-"# obrazecMjob/index.html" 
-"# obrazecMjob/index.html" 
+"# index.html" 
+"# index.html" 
