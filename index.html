@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vse na enem mestu za študentsko delo | Mjob študentski servis</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="slike/tab-ikona.jpg">
 </head>
 <body>
     <header>
@@ -22,7 +23,7 @@
                     <li><a href="#">Novosti</a></li>
                 </ul>
             </nav>
-            <div class="nav-icons">
+            <div class="ikone-zgoraj">
                 <a href="#" class="icon"><img src="slike/User-icon.png" alt="User Icon"></a> 
                 <a href="#" class="icon"><img src="slike/heart-icon.png" alt="Heart Icon"></a> 
                 <a href="tel:+042020450" class="telSt">04 20 20 450</a>
@@ -31,7 +32,7 @@
     </header>
 
     <main>
-        <section class="obrazec">
+        <div class="obrazec">
             <h2>Registracija</h2>
             <p>Vnesi šumnike in druge posebne znake, če so prisotni v tvojih uradnih podatkih. Polja označena z * so obvezna.</p>
             <form>
@@ -150,7 +151,7 @@
                             <option value="2001">2001</option>
                             <option value="2000">2000</option>
                             <option value="1999">1999</option>
-                            <option value="1998">1997</option>
+                            <option value="1998">1998</option>
                         </select>
                     </div>
                 </div>
@@ -193,14 +194,13 @@
 
                 <button type="submit" class="gumb-submit">Registracija</button>
             </form>
-        </section>
+        </div>
     </main>
 
-    <!-- Gumb za vrnitev na vrh strani -->
+    <!-- script z btwn -->
     <a href="#" id="scrollToTopBtn" class="scroll-to-top">&#8679; NA VRH</a>
     
     <script>
-        // Script za gumb vrnitev na vrh
         const scrollToTopBtn = document.getElementById("scrollToTopBtn");
         window.onscroll = function() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {

@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #AFE4FB;
-    min-height: 100vh;
+    min-height: 100%;
 
 }
 
@@ -16,7 +16,8 @@ header .navbar {
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    padding: 10px 20px;
+    border-bottom: 2px solid black;
+
 }
 
 .navbar .logo img {
@@ -35,21 +36,22 @@ header .navbar {
     font-size: 16px;
 }
 
-.nav-icons {
+.ikone-zgoraj {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.nav-icons .icon img {
+.ikone-zgoraj .icon img {
     width: 25px; 
 }
 
-.nav-icons .telSt {
+.ikone-zgoraj .telSt {
     font-weight: bold;
     color: black;
     text-decoration: none;
     font-size: 16px;
+    border-radius: 6px;
 }
 
 .obrazec {
@@ -58,7 +60,6 @@ header .navbar {
     border-radius: 10px;
     max-width: 400px;
     margin: 50px auto 0;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .obrazec h2 {
@@ -72,7 +73,7 @@ header .navbar {
     font-size: 14px;
     text-align: center;
     margin-bottom: 20px;
-    color: #000;
+    color: black;
 }
 
 .form-skupina {
@@ -81,7 +82,7 @@ header .navbar {
 
 label {
     font-size: 14px;
-    color: #000;
+    color: black;
     margin-bottom: 5px;
     display: block;
 }
@@ -91,9 +92,10 @@ input, select {
     padding: 10px;
     font-size: 14px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-top: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 4px black;
+    
 }
 
 .phone-input {
@@ -121,16 +123,20 @@ input, select {
 .checkbox {
     display: flex;
     align-items: center;
+    padding-left: 15px;
+
 }
 
 .checkbox input {
     margin-right: 10px;
+    box-shadow: none;
 }
 
 .checkbox a {
     font-size: 12px;
     color: #2D88DA;
     text-decoration: none;
+    
 }
 
 .gumb-submit {
@@ -139,20 +145,13 @@ input, select {
     border: none;
     width: 100%;
     padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 5px;;
     font-size: 18px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.gumb-submit:hover {
-    background-color: #3D36C2;
-}
 
 #scrollToTopBtn {
     position: fixed;
@@ -161,17 +160,24 @@ input, select {
     background-color: #524CE2;
     color: white;
     border: none;
-    border-radius: 35%;
+    border-radius: 20px;
     padding: 10px;
     display: none;
     cursor: pointer;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     text-decoration: none;
 }
+.obrazec{
+    box-shadow: 2px 2px 2px 2px black;
 
-#scrollToTopBtn:hover {
-    background-color: #3D36C2;
 }
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+
+
+
 
 
 
