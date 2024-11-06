@@ -1,3 +1,4 @@
+html {zoom: 125%;}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,7 +8,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #ACCBE1;
+    background-color: #f8f4f4;
     min-height: 100%;
 
 }
@@ -16,13 +17,14 @@ header .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #7C98B3;
-    border-bottom: 2px solid black;
+    background-color: white;
+    border-bottom: solid black 1px;
+;
 
 }
 
 .navbar .logo img {
-    width: 150px; 
+    width: 200px; 
 }
 
 .navbar nav ul {
@@ -53,10 +55,11 @@ header .navbar {
     text-decoration: none;
     font-size: 16px;
     border-radius: 6px;
+    padding-right: 5px;
 }
 
 .obrazec {
-    background-color: #CEE5F2;
+    background-color: white;
     padding: 20px;
     border-radius: 10px;
     max-width: 400px;
@@ -141,7 +144,7 @@ input, select {
 }
 
 .gumb-submit {
-    background-color: #524CE2;
+    background-color: green;
     color: white;
     border: none;
     width: 100%;
@@ -158,7 +161,7 @@ input, select {
     position: fixed;
     bottom: 40px;
     right: 40px;
-    background-color: #524CE2;
+    background-color: black;
     color: white;
     border: none;
     border-radius: 20px;
@@ -169,13 +172,18 @@ input, select {
     text-decoration: none;
 } /* prekopirano*/
 .obrazec{
-    box-shadow: 2px 2px 2px 2px black;
+    border: solid black 3px;
 
 }
 input[type="checkbox"] {
     width: 20px;
     height: 20px;
   }
+
+::placeholder{
+    color: #236299;
+
+}
 
 
 
