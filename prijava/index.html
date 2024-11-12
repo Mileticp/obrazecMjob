@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <html lang="sl">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vse na enem mestu za študentsko delo | Mjob študentski servis</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/style-prijava.css">
     <link rel="icon" href="slike/tab-ikona.jpg">
 </head>
 <body>
@@ -37,17 +39,50 @@
             <form>
                 <div class="forma">
                     <label>E-pošta:</label>
-                    <input type="email" id="email" placeholder="Vnesite e-pošto" required>
+                    <input type="email" id="email" placeholder="Vnesite e-pošto"  >
                 </div>
 
                 <div class="forma">
                     <label>Geslo:</label>
-                    <input type="password" id="geslo" placeholder="Vnesite geslo" required>
+                    <input type="password" id="geslo" placeholder="Vnesite geslo" >
                 </div>
-                <button type="submit" class="gumb-submit">Prijava</button>
+                <div class="forma">
+                    <a> Še nimaš računa?</a><a href="../index.html">Registriraj se.</a>
+                </div>
+                <div class="forma">
+                <button onclick="validateForm()" id="konec" class="gumb-submit">Prijava</button>
+                </div>
+                <script>
+                    
+                    
+                    function validateForm() {
+                        event.preventDefault();
+                        const email = document.getElementById('email').value.trim();
+                        const username = document.getElementById('geslo').value.trim();
+                        
+                        
+                        if (email && username) {
+                            Swal.fire({
+                                title: 'Uspeh!',
+                                text: 'Prijava je bila uspešna!',
+                                icon: 'success',
+                                confirmButtonText: 'V redu'
+                            });
+                        } else {
+                            Swal.fire({
+                                title: 'Error!',
+                                text: 'Izpolni vsa polja!',
+                                icon: 'error',
+                                confirmButtonText: 'V redu'
+                            });
+                        }
+                    }
+                
+                    </script>
             </form>
         </div>
     </main>
+
 
 </body>
 </html>
