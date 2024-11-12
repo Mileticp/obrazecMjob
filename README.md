@@ -1,2 +1,1 @@
-"# obrazecMjob" 
-"# obrazecMjob" 
+Moj prvi HTML/CSS obrazec pri predmetu NSAp.
