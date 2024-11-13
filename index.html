@@ -63,7 +63,7 @@
                             <option value="+386">+386</option>
                             <option value="+381">+381</option>
                         </select>
-                        <input type="text" id="telefon" placeholder="npr. 31 123 123" required>
+                        <input type="text" id="telefon" placeholder="npr. 12345678" required pattern="\d{8}">
                     </div>
                 </div>
 
@@ -157,7 +157,7 @@
                 </div>
 
                 <div class="forma">
-                    <input type="text" id="emso" placeholder="EMŠO">
+                    <input type="text" id="emso" placeholder="EMŠO (13 števk)" pattern="\d{13}">
                 </div>
 
                 <div class="forma">
@@ -165,11 +165,11 @@
                 </div>
 
                 <div class="forma">
-                    <input type="text" id="davcna-stevilka" placeholder="Davčna številka">
+                    <input type="text" id="davcna-stevilka" placeholder="Davčna številka(8 števk)" pattern="\d{8}" maxlength="8">
                 </div>
 
                 <div class="forma">
-                    <input type="text" id="trr" placeholder="TRR">
+                    <input type="text" id="trr" placeholder="TRR(15-19 števk)" pattern="\d{15,19}" maxlength="19">
                 </div>
 
                 <div class="forma">
