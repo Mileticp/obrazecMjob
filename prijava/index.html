@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <html lang="sl">
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vse na enem mestu za študentsko delo | Mjob študentski servis</title>
     <link rel="stylesheet" href="../styles/style-prijava.css">
     <link rel="icon" href="slike/tab-ikona.jpg">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <header>
         <div class="navbar">
             <div class="logo">
-                <img src="../slike/mjob-logo.png" alt="Mjob logo"> 
+                <a href="../index.html"><img src="../slike/mjob-logo.png" href="index.html" alt="Mjob logo"></a> 
             </div>
             <nav>
                 <ul class="meni">
@@ -39,7 +40,7 @@
             <form>
                 <div class="forma">
                     <label>E-pošta:</label>
-                    <input type="email" id="email" placeholder="Vnesite e-pošto"  >
+                    <input type="email" id="email" placeholder="Vnesite e-pošto">
                 </div>
 
                 <div class="forma">
@@ -50,33 +51,49 @@
                     <a> Še nimaš računa?</a><a href="../index.html">Registriraj se.</a>
                 </div>
                 <div class="forma">
-                <button onclick="validateForm()" id="konec" class="gumb-submit">Prijava</button>
+                <button onclick="preveri()" id="konec" class="gumb-submit">Prijava</button>
                 </div>
                 <script>
                     
                     
-                    function validateForm() {
-                        event.preventDefault();
-                        const email = document.getElementById('email').value.trim();
-                        const username = document.getElementById('geslo').value.trim();
-                        
-                        
-                        if (email && username) {
-                            Swal.fire({
-                                title: 'Uspeh!',
-                                text: 'Prijava je bila uspešna!',
-                                icon: 'success',
-                                confirmButtonText: 'V redu'
-                            });
-                        } else {
-                            Swal.fire({
-                                title: 'Error!',
-                                text: 'Izpolni vsa polja!',
-                                icon: 'error',
-                                confirmButtonText: 'V redu'
-                            });
-                        }
-                    }
+                    function preveri() {
+    event.preventDefault();
+    
+    const email = document.getElementById('email').value.trim();
+    const username = document.getElementById('geslo').value.trim();
+    
+
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+
+    if (!emailPattern.test(email)) {
+        Swal.fire({
+            title: 'Napaka!',
+            text: 'Prosimo, vnesite veljaven e-poštni naslov!',
+            icon: 'error',
+            confirmButtonText: 'V redu'
+        });
+        return; 
+    }
+    
+  
+    if (email && username) {
+        Swal.fire({
+            title: 'Uspeh!',
+            text: 'Prijava je bila uspešna!',
+            icon: 'success',
+            confirmButtonText: 'V redu'
+        });
+    } else {
+        Swal.fire({
+            title: 'Napaka!',
+            text: 'Izpolni vsa polja!',
+            icon: 'error',
+            confirmButtonText: 'V redu'
+        });
+    }
+}
+
                 
                     </script>
             </form>
