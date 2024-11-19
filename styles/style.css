@@ -185,6 +185,13 @@ input[type="checkbox"] {
 
 }
 
+.error {
+    color: red;
+    font-size: 12px;
+    display: none; 
+}
+
+
 
 
 

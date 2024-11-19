@@ -37,12 +37,13 @@
             <p>Vnesi šumnike in druge posebne znake, če so prisotni v tvojih uradnih podatkih. Polja označena z * so obvezna.</p>
             <form>
                 <div class="forma">
-                    
                     <input type="email" id="email" placeholder="E-pošta*" required >
+                    <span class="error" id="emailError"></span>
                 </div>
 
                 <div class="forma">
                     <input type="password" id="geslo" placeholder="Geslo *" required>
+                    <span class="error" id="gesloError"></span>
                 </div>
 
                 <div class="forma">
@@ -64,6 +65,7 @@
                             <option value="+381">+381</option>
                         </select>
                         <input type="text" id="telefon" placeholder="npr. 12345678" required pattern="\d{8}">
+                        <span class="error" id="telefonError"></span>
                     </div>
                 </div>
 
@@ -158,6 +160,7 @@
 
                 <div class="forma">
                     <input type="number" id="emso" placeholder="EMŠO (13 števk)" pattern="\d{13}">
+                    <span class="error" id="emsoError"></span>
                 </div>
 
                 <div class="forma">
@@ -165,11 +168,13 @@
                 </div>
 
                 <div class="forma">
-                    <input type="number" id="davcna-stevilka" placeholder="Davčna številka (8 števk)" pattern="\d{8}" maxlength="8">
+                    <input type="number" id="davcna" placeholder="Davčna številka (8 števk)" pattern="\d{8}" maxlength="8">
+                    <span class="error" id="davcnaError"></span>
                 </div>
 
                 <div class="forma">
-                    <input type="number" id="trr" placeholder="TRR (15-19 števk)" pattern="\d{15,19}" maxlength="19">
+                    <input type="number" id="trr" placeholder="TRR (16 števk)" pattern="\d{15,19}" maxlength="19">
+                    <span class="error" id="trrError"></span>
                 </div>
 
                 <div class="forma">
@@ -214,6 +219,108 @@
             document.documentElement.scrollTop = 0;
         });
     </script>
+    <script>
+    document.getElementById("email").addEventListener("input", function() {
+        const email = this.value;
+        const emailError = document.getElementById("emailError");
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        
+        if (!email.match(emailPattern)) {
+            emailError.textContent = "Napačen format e-pošte. Pravilno: example@example.com";
+            emailError.style.display = "block";
+        } else {
+            emailError.style.display = "none";
+        }
+    });
+
+    document.getElementById("geslo").addEventListener("input", function() {
+        const password = this.value;
+        const passwordError = document.getElementById("gesloError");
+        if (password.length < 6) {
+            passwordError.textContent = "Geslo mora imeti vsaj 6 znakov.";
+            passwordError.style.display = "block";
+        } else {
+            passwordError.style.display = "none";
+        }
+    });
+
+    document.getElementById("telefon").addEventListener("input", function() {
+        const phone = this.value;
+        const phoneError = document.getElementById("telefonError");
+        const phonePattern = /^\d{8}$/;
+        
+        if (!phone.match(phonePattern)) {
+            phoneError.textContent = "Vnesite 8-mestno telefonsko številko (npr. 12345678).";
+            phoneError.style.display = "block";
+        } else {
+            phoneError.style.display = "none";
+        }
+    });
+
+    document.getElementById("emso").addEventListener("input", function() {
+        const emso = this.value;
+        const emsoError = document.getElementById("emsoError");
+        const emsoPattern = /^\d{13}$/;
+        
+        if (!emso.match(emsoPattern)) {
+            emsoError.textContent = "EMŠO mora imeti 13 številk.";
+            emsoError.style.display = "block";
+        } else {
+            emsoError.style.display = "none";
+        }
+    });
+
+    document.getElementById("trr").addEventListener("input", function() {
+        const trr = this.value;
+        const trrError = document.getElementById("trrError");
+        const trrPattern = /^\d{16}$/;
+        
+        if (!trr.match(trrPattern)) {
+            trrError.textContent = "TRR mora imeti 16 številk.";
+            trrError.style.display = "block";
+        } else {
+            trrError.style.display = "none";
+        }
+    });
+
+    document.getElementById("davcna").addEventListener("input", function() {
+        const davcna = this.value;
+        const davcnaError = document.getElementById("davcnaError");
+        const davcnaPattern = /^\d{8}$/;
+        
+        if (!davcna.match(davcnaPattern)) {
+            davcnaError.textContent = "Davčna številka mora imeti 8 številk.";
+            davcnaError.style.display = "block";
+        } else {
+            davcnaError.style.display = "none";
+        }
+    });
+            document.querySelector("form").addEventListener("submit", function(event) {
+       
+        const errors = document.getElementsByClassName("error");
+        let isFormValid = true;
+
+        
+        for (let i = 0; i < errors.length; i++) {
+            if (errors[i].style.display === "block") {
+                isFormValid = false; 
+                break;  
+            }
+        }
+
+        if (!isFormValid) {
+            event.preventDefault();  
+            alert("Prosimo, popravite napake v obrazcu.");
+        } else {
+            alert("Uspešno ste se registrirali!");
+        }
+    });
+
+
+    </script>
+
+
+    
 
     
 
