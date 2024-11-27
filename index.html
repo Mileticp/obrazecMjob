@@ -49,6 +49,7 @@
 
                 <div class="forma">
                     <input type="text" id="potrdi-geslo" placeholder="Potrdi geslo *" required>
+                    <span class="error" id="potrdigesloError"></span>
                 </div>
 
                 <div class="forma">
@@ -234,16 +235,43 @@
         }
     });
 
+    document.getElementById("potrdi-geslo").addEventListener("input", function() {
+        const confirmPassword = this.value;
+
+    });
+
     document.getElementById("geslo").addEventListener("input", function() {
         const password = this.value;
         const passwordError = document.getElementById("gesloError");
-        if (password.length < 6) {
-            passwordError.textContent = "Geslo mora imeti vsaj 6 znakov.";
+        const potrdigesloError = document.getElementById("potrdigesloError");
+        if (password.length < 6 ) {
+            passwordError.textContent = "Gesli mora imeti vsaj 6 znakov in se morata ujemati";
             passwordError.style.display = "block";
         } else {
             passwordError.style.display = "none";
         }
+
+        if (confirmPassword!=password) {
+            potrdigesloError.textContent = "Gesli se ne ujemata.";
+            potrdigesloError.style.display = "block";
+            isFormValid = false;
+        } else {
+            potrdigesloError.style.display = "none";
+        }
     });
+
+    document.getElementById("potrdi-geslo").addEventListener("input", function () {
+    const password = document.getElementById("geslo").value;
+    const confirmPassword = this.value;
+    const confirmPasswordError = document.getElementById("potrdigesloError");
+
+    if (password !== confirmPassword) {
+        confirmPasswordError.textContent = "Gesli se ne ujemata.";
+        confirmPasswordError.style.display = "block";
+    } else {
+        confirmPasswordError.style.display = "none";
+    }
+});
 
     document.getElementById("telefon").addEventListener("input", function() {
         const phone = this.value;
@@ -329,6 +357,8 @@
         });
     });
     </script>
+
+    
 
     
     
