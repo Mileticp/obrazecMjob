@@ -339,9 +339,21 @@
 
         if (!isFormValid) {
             event.preventDefault();  
-            alert("Prosimo, popravite napake v obrazcu.");
+            Swal.fire({
+            title: 'Napaka',
+            text: 'Popravi napake v obrazcu',
+            icon: 'error',
+            confirmButtonText: 'Zapri'
+        });
         } else {
-            alert("Uspešno ste se registrirali!");
+            event.preventDefault();
+            Swal.fire({
+            title: 'Uspeh',
+            text: 'Registracija je uspešna!',
+            icon: 'success',
+            timer: '3000'
+            confirmButtonText: 'Zapri'
+        });
         }
     });
 
