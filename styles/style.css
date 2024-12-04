@@ -145,7 +145,7 @@ input, select {
 }
 
 .gumb-submit {
-    background-color: green;
+    background-color: darkslategrey;
     color: white;
     border: none;
     width: 100%;
@@ -182,7 +182,7 @@ input[type="checkbox"] {
   }
 
 ::placeholder{
-    color: #236299;
+    color: darkslategray;
 
 }
 
@@ -190,6 +190,7 @@ input[type="checkbox"] {
     color: red;
     font-size: 12px;
     display: none; 
+    padding-top: 6px;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -203,6 +204,13 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+#toggle-password {
+
+    visibility: visible;
+}
+
+#password:not(:placeholder-shown) + #toggle-password {visibility: visible;}
 
 
 

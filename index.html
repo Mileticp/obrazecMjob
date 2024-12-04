@@ -43,12 +43,12 @@
                 </div>
 
                 <div class="forma">
-                    <input type="text" id="geslo" placeholder="Geslo *" required>
+                    <input type="password" id="geslo" placeholder="Geslo *" required>
                     <span class="error" id="gesloError"></span>
                 </div>
 
                 <div class="forma">
-                    <input type="text" id="potrdi-geslo" placeholder="Potrdi geslo *" required>
+                    <input type="password" id="potrdi-geslo" placeholder="Potrdi geslo *" required>
                     <span class="error" id="potrdigesloError"></span>
                 </div>
 
@@ -324,7 +324,7 @@
             davcnaError.style.display = "none";
         }
     });
-            document.querySelector("form").addEventListener("submit", function(event) {
+        document.querySelector("form").addEventListener("submit", function(event) {
        
         const errors = document.getElementsByClassName("error");
         let isFormValid = true;
@@ -352,7 +352,8 @@
             text: 'Registracija je uspešna!',
             icon: 'success',
             confirmButtonText: 'Zapri'
-        });
+        }).then((form) => {form.submit();
+            });
         }
     });
 
