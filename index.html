@@ -38,17 +38,17 @@
             <p>Vnesi šumnike in druge posebne znake, če so prisotni v tvojih uradnih podatkih. Polja označena z * so obvezna.</p>
             <form>
                 <div class="forma">
-                    <input type="email" id="email" placeholder="E-pošta*" required >
+                    <input type="email" id="email" placeholder="E-pošta*" required maxlength="30">
                     <span class="error" id="emailError"></span>
                 </div>
 
                 <div class="forma">
-                    <input type="password" id="geslo" placeholder="Geslo *" required>
+                    <input type="password" id="geslo" placeholder="Geslo *" required maxlength="20">
                     <span class="error" id="gesloError"></span>
                 </div>
 
                 <div class="forma">
-                    <input type="password" id="potrdi-geslo" placeholder="Potrdi geslo *" required>
+                    <input type="password" id="potrdi-geslo" placeholder="Potrdi geslo *" required maxlength="10">
                     <span class="error" id="potrdigesloError"></span>
                 </div>
 
@@ -57,7 +57,7 @@
                 </div>
 
                 <div class="forma">
-                    <input type="text" id="priimek" placeholder="Priimek *" required maxlength="200">
+                    <input type="text" id="priimek" placeholder="Priimek *" required maxlength="20">
                 </div>
 
                 <div class="forma">
