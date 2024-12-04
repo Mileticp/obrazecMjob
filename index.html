@@ -53,11 +53,11 @@
                 </div>
 
                 <div class="forma">
-                    <input type="text" id="ime" placeholder="Ime *" required>
+                    <input type="text" id="ime" placeholder="Ime *" required maxlength="20">
                 </div>
 
                 <div class="forma">
-                    <input type="text" id="priimek" placeholder="Priimek *" required>
+                    <input type="text" id="priimek" placeholder="Priimek *" required maxlength="200">
                 </div>
 
                 <div class="forma">
@@ -66,13 +66,13 @@
                             <option value="+386">+386</option>
                             <option value="+381">+381</option>
                         </select>
-                        <input type="number" id="telefon" placeholder="npr. 12345678" required pattern="\d{8}">
+                        <input type="number" id="telefon" placeholder="npr. 12345678" required pattern="\d{8}" maxlength="8">
                         <span class="error" id="telefonError"></span>
                     </div>
                 </div>
 
                 <div class="forma">
-                    <input type="text" id="naslov" placeholder="Pošta in kraj stalnega prebivališča *" required>
+                    <input type="text" id="naslov" placeholder="Pošta in kraj stalnega prebivališča *" required maxlength="20">
                 </div>
 
                 <div class="forma">
@@ -161,12 +161,12 @@
                 </div>
 
                 <div class="forma">
-                    <input type="number" id="emso" placeholder="EMŠO (13 števk)" pattern="\d{13}">
+                    <input type="number" id="emso" placeholder="EMŠO (13 števk)" pattern="\d{13}" maxlength="13">
                     <span class="error" id="emsoError"></span>
                 </div>
 
                 <div class="forma">
-                    <input type="text" id="kraj-bivanja" placeholder="Kraj bivanja">
+                    <input type="text" id="kraj-bivanja" placeholder="Kraj bivanja" maxlength="20">
                 </div>
 
                 <div class="forma">
@@ -180,11 +180,11 @@
                 </div>
 
                 <div class="forma">
-                    <input type="text" id="drzavljanstvo" placeholder="Državljanstvo">
+                    <input type="text" id="drzavljanstvo" placeholder="Državljanstvo" maxlength="20">
                 </div>
 
                 <div class="forma">
-                    <input type="text" id="promocijska-koda" placeholder="Promocijska koda">
+                    <input type="text" id="promocijska-koda" placeholder="Promocijska koda" maxlength="20">
                 </div>
 
                 <div class="forma checkbox">
